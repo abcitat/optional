@@ -1,0 +1,14 @@
+class NeighborOfTheBeast {
+
+    public static void main(String[] args) {
+    	
+    	int num=667;
+    	System.out.printf("the neighbor of the beast:%d!",num);
+    	System.out.printf("\nthe neighbor of the beast:%X!",num);
+    	System.out.printf("\nthe neighbor of the beast:%10d!",num);
+    	System.out.printf("\nthe neighbor of the beast:%-10d!",num);
+    	System.out.printf("\nthe neighbor of the beast:%08d!",num);
+    	System.out.printf("\nthe neighbor of the beast:%+-12d!",num);
+    }
+
+}
