@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class TimeCalculator {
+	
+    public static void main(String[] args) {
+    	
+    	System.out.println("Welcome to the TimeCalculator!");
+    	System.out.print("please enter a duration in milliseconds:");
+ 	   	Scanner sc = new Scanner(System.in);
+ 	   	long input=sc.nextLong();
+ 	   	
+ 	   	System.out.printf("%d ms are exactly:",input);
+ 	   	double days=input/(int)1000/60/60/24;
+ 	   	int d=(int)days;
+    	double hours=(input/(int)1000-d*60*60*24)/60/60;
+    	int h=(int)hours;
+    	double minutes=(input/(int)1000-d*60*60*24-h*60*60)/(int)60;
+    	int min=(int)minutes;
+    	double millisecond=input%(int)1000;
+    	int ms=(int)millisecond;
+    	double seconds=((input-ms)%10000)/1000;
+    	int s=(int)seconds;
+    	
+    	
+    	System.out.print("\n"+String.format("%7s", "days")+" "+d);
+    	System.out.print("\n"+String.format("%7s", "hours")+" "+h);
+    	System.out.print("\n"+String.format("%7s", "minutes")+" "+min);
+    	System.out.print("\n"+String.format("%7s", "seconds")+" "+s);
+    	System.out.print("\n"+String.format("%7s", "ms")+" "+ms);
+    	sc.close();
+		
+
+
+		
+	}
+
+
+}
