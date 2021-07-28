@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class DateFormatConverter {
+	   public static void main(String[] args) {
+		   
+		   Scanner s = new Scanner(System.in);
+		   System.out.println("enter date (yyyymmdd)");
+		   int date_value=s.nextInt();
+		   s.close();
+		   if(date_value>=15821016 && date_value<=21001231) {
+			   int year=date_value/10000;
+			   int month=date_value%10000/100;
+			   int day=date_value%10000%100;
+			   System.out.print(day+".");
+			   System.out.printf("%02d",month);
+			   System.out.print("."+year);
+		   }
+		   else {
+			   System.out.print("invalid date");
+		   }
+		   
+	   }
+
+}
